@@ -1,0 +1,300 @@
+
+*, *::after, *::before {
+    box-sizing:border-box;  
+    font-family: "Montserrat", sans-serif;
+  }
+  button, summary {
+      cursor: pointer;
+  }
+
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+p, h2, h1, h3 {
+    color: var(--color-text);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* cursor: none; */
+    height: 100vh;
+    width: 100vw;
+
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+
+
+   
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+
+
+
+
+:root{
+    --color-background-gradient: rgb(10, 10, 10);
+    --color-direct-background:rgba(44, 44, 44, 0.63);
+
+    --color-text:white;
+    --color-links: rgb(255, 255, 255);
+
+    --color-white: white;
+
+    --color-gradient-een: rgba(10,10,10,1) 38%;
+
+    --color-gradient-twee: rgba(10,10,10,0) 100%;
+
+    --transparent-neon: rgba(0, 0, 0, 0.4); 
+
+
+    --neonkleureen: rgb(182, 182, 182);
+
+    --neonkleurtwee: rgb(129, 129, 129);
+}
+
+
+
+
+
+
+/* achtergrond vlak*//* achtergrond vlak*//* achtergrond vlak*//* achtergrond vlak*/
+body > div {
+    background: rgb(0,0,0);
+    background: linear-gradient(194deg, rgba(0,0,0,1) 42%, rgba(0,0,0,0.3660057773109243) 100%);  
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    position: absolute;
+    
+}
+
+body > img {
+    z-index: -3;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    background-size: contain
+
+
+
+}
+
+
+
+
+
+/* header *//* header *//* header *//* header *//* header *//* header */
+/* header *//* header *//* header *//* header *//* header *//* header */
+/* header *//* header *//* header *//* header *//* header *//* header */
+/* header *//* header *//* header *//* header *//* header *//* header */
+header{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-left: 2em;
+    padding-right: 3em;
+    justify-content: space-between;
+    /* position: sticky;
+    top: 0; */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--color-text);
+    display: flex;
+    flex-wrap: nowrap;
+    
+    top: 1.6em;
+    left: 0.8em;
+}
+
+header nav {
+    width: 40%;
+    min-width: 18em;
+    max-width: 25em;
+    
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header ul li a{
+    text-decoration: none;
+    color: var(--color-links);
+}
+
+
+
+
+nav ul li a {
+    color: var(--neonkleureen);
+    text-shadow:
+      0 0 7px var(--neonkleureen),
+      0 0 10px var(--neonkleureen),
+      0 0 21px var(--neonkleureen),
+      0 0 42px var(--neonkleurtwee),
+      0 0 82px var(--neonkleurtwee),
+      0 0 92px var(--neonkleurtwee),
+      0 0 102px var(--neonkleurtwee),
+      0 0 151px var(--neonkleurtwee);
+      animation: flikkering 1.5s infinite alternate;    
+  }
+
+@keyframes flikkering {
+    
+  100% {
+
+      text-shadow:
+      0 0 4px var(--neonkleureen),
+      0 0 11px var(--neonkleureen),
+      0 0 19px var(--neonkleureen),
+      0 0 40px var(--neonkleurtwee),
+      0 0 80px var(--neonkleurtwee),
+      0 0 90px var(--neonkleurtwee),
+      0 0 100px var(--neonkleurtwee),
+      0 0 150px var(--neonkleurtwee);
+  
+  }
+  
+  0% {
+
+    text-shadow:
+    0 0 2px var(--neonkleureen),
+    0 0 4px var(--neonkleureen),
+    0 0 6px var(--neonkleureen),
+    0 0 10px var(--neonkleurtwee),
+    0 0 45px var(--neonkleurtwee),
+    0 0 55px var(--neonkleurtwee),
+    0 0 70px var(--neonkleurtwee),
+    0 0 80px var(--neonkleurtwee);
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes flikkeringBox {
+    
+    100% {
+  
+        box-shadow: 
+    0 0 4px var(--neonkleureen),
+    0 0 6px var(--neonkleureen),
+    0 0 8px var(--neonkleureen),
+    0 0 10px var(--neonkleurtwee),
+    0 0 13px var(--neonkleurtwee),
+    0 0 15px var(--neonkleurtwee),
+    0 0 15px var(--neonkleurtwee),
+    0 0 12px var(--neonkleurtwee);
+    
+    }
+
+    70% {
+
+        box-shadow: 
+        0 0 2px var(--neonkleureen),
+        0 0 3px var(--neonkleureen),
+        0 0 8px var(--neonkleureen),
+        0 0 10px var(--neonkleurtwee),
+        0 0 10px var(--neonkleurtwee),
+        0 0 10px var(--neonkleurtwee),
+        0 0 11px var(--neonkleurtwee),
+        0 0 12px var(--neonkleurtwee);
+
+    }
+    
+
+
+    40%{
+
+        box-shadow: 
+        0 0 4px var(--neonkleureen),
+        0 0 6px var(--neonkleureen),
+        0 0 8px var(--neonkleureen),
+        0 0 10px var(--neonkleurtwee),
+        0 0 13px var(--neonkleurtwee),
+        0 0 15px var(--neonkleurtwee),
+        0 0 15px var(--neonkleurtwee),
+        0 0 12px var(--neonkleurtwee);
+    }
+
+    0% {
+  
+        box-shadow: 
+        0 0 1px  var(--neonkleureen),
+        0 0 2px  var(--neonkleureen),
+        0 0 3px var(--neonkleureen),
+        0 0 4px var(--neonkleurtwee),
+        0 0 6px var(--neonkleurtwee),
+        0 0 10px var(--neonkleurtwee),
+        0 0 13px var(--neonkleurtwee),
+        0 0 12px var(--neonkleurtwee);
+  
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+/* Bronnen:
+
+https://css-tricks.com/how-to-create-neon-text-with-css/
+https://9elements.github.io/fancy-border-radius/full-control.html#0.37.0.88-0.90.71.100-.
+https://cssgradient.io/
+
+*/
+
+
+
+
+
+
+
+
+
+
+

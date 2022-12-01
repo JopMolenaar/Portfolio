@@ -1,0 +1,222 @@
+
+/* main *//* main *//* main *//* main *//* main *//* main *//* main */
+/* main *//* main *//* main *//* main *//* main *//* main *//* main */
+/* main *//* main *//* main *//* main *//* main *//* main *//* main */
+/* main *//* main *//* main *//* main *//* main *//* main *//* main */
+
+
+main {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    flex-direction: column;
+    height: 50em;
+    color: var(--color-text);
+    position: relative;
+}
+
+main > p {
+    position: relative;
+    font-size: 1.1em;
+    top: 2em;
+    left: 4em;    
+
+    max-width: 27em;
+    margin-bottom: 1em;
+    
+}
+
+main ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 800px;
+    gap: 2em;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    place-items: center;
+    margin-top: 3em;
+}
+
+main ul li {
+    list-style: none;
+    width: fit-content;
+    justify-content: center;
+  
+}
+
+
+
+
+
+main ul li a {
+    background-color: var(--transparent-neon);
+    width: 80vw;
+    max-width: 30em;
+    height: 280px;
+    padding: 1em;
+    margin: 0.5em;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: var(--neonkleureen) 1px solid;
+    border-radius: 10px;
+    box-shadow: 
+    0 0 2px var(--neonkleureen),
+    0 0 4px var(--neonkleureen),
+    0 0 5px var(--neonkleureen),
+    0 0 6px var(--neonkleurtwee),
+    0 0 7px var(--neonkleurtwee),
+    0 0 8px var(--neonkleurtwee),
+    0 0 9px var(--neonkleurtwee),
+    0 0 10px var(--neonkleurtwee);
+    animation: flikkeringBox 1.8s infinite alternate;   
+  
+}
+
+
+
+
+
+
+
+
+  
+
+
+main ul li a div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+main  ul li a img {
+    width: 20em;
+    /* height: auto; */
+    object-fit: cover;
+    position: absolute;
+
+    bottom: 0.1em;
+    right: 0.1em;    
+}
+
+main ul li a div h3{
+    font-size: 1.3em;
+}
+
+main ul li a div{
+    position: relative;
+}
+main ul li a div p {
+
+    display: none;
+
+}
+
+
+
+
+
+
+
+
+/* Media main *//* Media main *//* Media main *//* Media main *//* Media main */
+/* Media main *//* Media main *//* Media main *//* Media main *//* Media main */
+/* Media main *//* Media main *//* Media main *//* Media main *//* Media main */
+
+
+@media (min-width: 36em){
+    main ul li a div p {
+        display: inline;
+        max-width: 13em;
+    }
+
+    main ul li a div p:nth-of-type(2){
+        position: absolute;
+        bottom: 0em;
+    } 
+
+    main ul li a div p span {
+        animation: flikkering 2s infinite alternate;  
+        color: var(--neonkleureen);
+    }
+
+  
+
+}
+
+@media (min-width: 40em) {
+    main > p {
+        max-width: 30em;
+    }
+}
+
+
+@media (min-width: 46em){
+
+
+
+    main ul{
+        top: 4.7em;
+        position: absolute;
+        right: 4em;
+        width: fit-content;
+    }
+    
+
+
+    main ul li a {
+
+        width: 500px;
+        padding: 1em;
+        margin: 0.5em;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+       
+    }
+
+    main > p {
+        /* position: absolute; */
+        /* max-width: 25em; */
+        /* font-size: 1.5em; */
+        top: 2em;
+    }
+}
+
+
+    @media (min-width: 64em){
+        main > p {
+            position: absolute;
+            max-width: 22em;
+            font-size: 1.2em;
+            top: 6.4em;
+            left: 2em;
+        }
+
+        main ul {
+            top: 0em;
+
+        }
+
+
+    }
+
+
+    @media (min-width: 70em){
+    main > p {
+        position: absolute;
+        max-width: 22em;
+        font-size: 1.5em;
+        top: 4.8em;
+        left: 2em;
+    }
+
+
+}
+
