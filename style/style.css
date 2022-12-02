@@ -1,3 +1,7 @@
+/* algemeen *//* algemeen *//* algemeen *//* algemeen */
+/* algemeen *//* algemeen *//* algemeen *//* algemeen */
+/* algemeen *//* algemeen *//* algemeen *//* algemeen */
+
 
 *, *::after, *::before {
     box-sizing:border-box;  
@@ -10,6 +14,7 @@
   a {
     color: var(--color-text);
     text-decoration: none;
+   
 }
 
 p, h2, h1, h3 {
@@ -26,9 +31,6 @@ body{
 
     overflow-x: hidden;
     /* overflow-y: hidden; */
-
-
-   
 }
 
 .visually-hidden {
@@ -45,14 +47,24 @@ body{
 
 
 
-:root{
+
+
+
+
+
+
+  :root{
     --color-background-gradient: rgb(10, 10, 10);
     --color-direct-background:rgba(44, 44, 44, 0.63);
 
     --color-text:white;
     --color-links: rgb(255, 255, 255);
 
-    --color-white: white;
+    --color-white: #C1C1C1;
+
+    --color-text: black;
+
+    
 
     --color-gradient-een: rgba(10,10,10,1) 38%;
 
@@ -66,6 +78,40 @@ body{
     --neonkleurtwee: rgb(129, 129, 129);
 }
 
+@media (prefers-color-scheme:dark){
+:root{
+    --color-background-gradient: rgb(10, 10, 10);
+    --color-direct-background:rgba(44, 44, 44, 0.63);
+
+    --color-text:white;
+    --color-links: rgb(255, 255, 255);
+
+    --gradient-white: linear-gradient(194deg, #C1C1C1 100%, 
+    #FFFFFF 100%);
+
+    --gradient-black: linear-gradient(194deg, #2C2C2C 100%,
+    #555555 100%);
+
+    --color-white: #C1C1C1;
+
+    --color-text-black: black;
+
+    --color-gradient-een: rgba(10,10,10,1) 38%;
+
+    --color-gradient-twee: rgba(10,10,10,0) 100%;
+
+    --transparent-neon: rgba(0, 0, 0, 0.4); 
+
+
+    --neonkleureen: rgb(182, 182, 182);
+
+    --neonkleurtwee: rgb(129, 129, 129);
+}
+}
+
+
+
+
 
 
 
@@ -74,12 +120,13 @@ body{
 /* achtergrond vlak*//* achtergrond vlak*//* achtergrond vlak*//* achtergrond vlak*/
 body > div {
     background: rgb(0,0,0);
-    background: linear-gradient(194deg, rgba(0,0,0,1) 42%, rgba(0,0,0,0.3660057773109243) 100%);  
+    background: linear-gradient(194deg, #2C2C2C 42%, rgba(0,0,0,0.3660057773109243) 100%);  
+
+   
     height: 100vh;
     width: 100vw;
     z-index: -1;
     position: absolute;
-    
 }
 
 body > img {
@@ -89,10 +136,11 @@ body > img {
     object-fit: cover;
     position: absolute;
     background-size: contain
-
-
-
 }
+
+
+
+
 
 
 
@@ -107,11 +155,18 @@ header{
     display: flex;
     align-items: center;
     justify-content: right;
+    position: relative;
     padding-left: 2em;
     padding-right: 3em;
-    justify-content: space-between;
+    justify-content: center;
     /* position: sticky;
     top: 0; */
+    padding-top: 2em;
+
+
+
+
+    /* flex-direction: column; */
 }
 
 header h1 {
@@ -121,172 +176,137 @@ header h1 {
     color: var(--color-text);
     display: flex;
     flex-wrap: nowrap;
+
+    position: absolute;
     
     top: 1.6em;
     left: 0.8em;
 }
 
 header nav {
-    width: 40%;
+
     min-width: 18em;
-    max-width: 25em;
+ 
+    
     
 }
 
-header ul {
+
+
+
+
+
+header nav ul {
     list-style: none;
     display: flex;
+
+    /* flex-direction: column; */
+
     justify-content: space-between;
+    gap: 1em;
+
+    /* height: 15em; */
+    margin-top: 4em;
+    
 
 }
 
-header ul li a{
+
+
+
+
+
+
+
+header nav ul li a{
     text-decoration: none;
     color: var(--color-links);
 }
 
 
+header nav ul li {
+    /* padding: 1em; */
+    transform: rotate(10deg);
+   
+    background-color: var(--color-white);
+    transition: ease-in 0.1s;
 
-
-nav ul li a {
-    color: var(--neonkleureen);
-    text-shadow:
-      0 0 7px var(--neonkleureen),
-      0 0 10px var(--neonkleureen),
-      0 0 21px var(--neonkleureen),
-      0 0 42px var(--neonkleurtwee),
-      0 0 82px var(--neonkleurtwee),
-      0 0 92px var(--neonkleurtwee),
-      0 0 102px var(--neonkleurtwee),
-      0 0 151px var(--neonkleurtwee);
-      animation: flikkering 1.5s infinite alternate;    
-  }
-
-@keyframes flikkering {
     
-  100% {
+}
 
-      text-shadow:
-      0 0 4px var(--neonkleureen),
-      0 0 11px var(--neonkleureen),
-      0 0 19px var(--neonkleureen),
-      0 0 40px var(--neonkleurtwee),
-      0 0 80px var(--neonkleurtwee),
-      0 0 90px var(--neonkleurtwee),
-      0 0 100px var(--neonkleurtwee),
-      0 0 150px var(--neonkleurtwee);
-  
+header nav ul li a {
+    /* color: var(--neonkleureen); */
+    color: var(--color-text-black);
+    
+   
+      
+    padding: 1em;
+    transform: rotate(10deg);
+    background-image: var(--gradient-white);
+    transition: ease-in 0.1s;
+    box-shadow:
+      0 0 7px var(--color-text);
+     
+
+      
   }
-  
-  0% {
 
-    text-shadow:
-    0 0 2px var(--neonkleureen),
-    0 0 4px var(--neonkleureen),
-    0 0 6px var(--neonkleureen),
-    0 0 10px var(--neonkleurtwee),
-    0 0 45px var(--neonkleurtwee),
-    0 0 55px var(--neonkleurtwee),
-    0 0 70px var(--neonkleurtwee),
-    0 0 80px var(--neonkleurtwee);
+
+  header nav ul li:hover {
+    transform: rotate(-10deg);
+  }
+  header nav ul li.active{
+    transform: rotate(0deg);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* main *//* main *//* main *//* main *//* main */
+/* main *//* main *//* main *//* main *//* main */
+/* main *//* main *//* main *//* main *//* main */
+
+
+
+
+
+@media (min-width: 37.5em){
+    header{
+        /* flex-direction: row; */
+        justify-content: space-between;
+    }
+
+
+    header h1 {
+        position: static;
+    }
+  
+    header nav ul {
+
+
+      
+        margin-top: 1em;
+
+    }
 
 }
 
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@keyframes flikkeringBox {
-    
-    100% {
-  
-        box-shadow: 
-    0 0 4px var(--neonkleureen),
-    0 0 6px var(--neonkleureen),
-    0 0 8px var(--neonkleureen),
-    0 0 10px var(--neonkleurtwee),
-    0 0 13px var(--neonkleurtwee),
-    0 0 15px var(--neonkleurtwee),
-    0 0 15px var(--neonkleurtwee),
-    0 0 12px var(--neonkleurtwee);
-    
-    }
-
-    70% {
-
-        box-shadow: 
-        0 0 2px var(--neonkleureen),
-        0 0 3px var(--neonkleureen),
-        0 0 8px var(--neonkleureen),
-        0 0 10px var(--neonkleurtwee),
-        0 0 10px var(--neonkleurtwee),
-        0 0 10px var(--neonkleurtwee),
-        0 0 11px var(--neonkleurtwee),
-        0 0 12px var(--neonkleurtwee);
-
-    }
-    
-
-
-    40%{
-
-        box-shadow: 
-        0 0 4px var(--neonkleureen),
-        0 0 6px var(--neonkleureen),
-        0 0 8px var(--neonkleureen),
-        0 0 10px var(--neonkleurtwee),
-        0 0 13px var(--neonkleurtwee),
-        0 0 15px var(--neonkleurtwee),
-        0 0 15px var(--neonkleurtwee),
-        0 0 12px var(--neonkleurtwee);
-    }
-
-    0% {
-  
-        box-shadow: 
-        0 0 1px  var(--neonkleureen),
-        0 0 2px  var(--neonkleureen),
-        0 0 3px var(--neonkleureen),
-        0 0 4px var(--neonkleurtwee),
-        0 0 6px var(--neonkleurtwee),
-        0 0 10px var(--neonkleurtwee),
-        0 0 13px var(--neonkleurtwee),
-        0 0 12px var(--neonkleurtwee);
-  
-  }
-  
-}
-
-
-
-
-
-
-
-
-
-
-/* Bronnen:
-
-https://css-tricks.com/how-to-create-neon-text-with-css/
-https://9elements.github.io/fancy-border-radius/full-control.html#0.37.0.88-0.90.71.100-.
-https://cssgradient.io/
-
-*/
 
 
 
