@@ -7,8 +7,7 @@
 
 main {
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
+
     flex-direction: column;
     height: 50em;
     color: var(--color-text);
@@ -19,7 +18,7 @@ main > p {
     position: relative;
     font-size: 1.1em;
     top: 2em;
-    left: 4em;    
+    left: 3em;    
 
     max-width: 27em;
     margin-bottom: 1em;
@@ -32,7 +31,7 @@ main ul{
     justify-content: center;
     width: 100vw;
     height: 800px;
-    gap: 2em;
+    gap: 4em;
     margin-right: auto;
     margin-left: auto;
     padding: 0;
@@ -44,60 +43,60 @@ main ul li {
     list-style: none;
     width: fit-content;
     justify-content: center;
+
+    box-shadow:
+      0 0 7px var(--color-text);
+      transition: ease-in 0.1s;
   
 }
 
+main ul li:nth-child(1){
+    transform: rotate(2deg);
+    
+}
 
+main ul li:nth-child(2){
+    transform: rotate(-3deg);
+}
 
+main ul li:hover{
+    transform: rotate(0deg);
+} 
 
 
 main ul li a {
-    background-color: var(--transparent-neon);
+    background-color: var(--color-white);
+ 
     width: 80vw;
     max-width: 30em;
     height: 280px;
     padding: 1em;
-    margin: 0.5em;
+
     display: flex;
     flex-direction: row;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+  
 
-    border: var(--neonkleureen) 1px solid;
-    border-radius: 10px;
-    box-shadow: 
-    0 0 2px var(--neonkleureen),
-    0 0 4px var(--neonkleureen),
-    0 0 5px var(--neonkleureen),
-    0 0 6px var(--neonkleurtwee),
-    0 0 7px var(--neonkleurtwee),
-    0 0 8px var(--neonkleurtwee),
-    0 0 9px var(--neonkleurtwee),
-    0 0 10px var(--neonkleurtwee);
-    animation: flikkeringBox 1.8s infinite alternate;   
+    
+
+    border: var(--color-white) 1px solid;
+    
   
 }
 
 
-
-
-
-
-
-
-  
 
 
 main ul li a div {
     display: flex;
     flex-direction: column;
+    color: var(--color-text-black);
 
 }
 
 main  ul li a img {
     width: 20em;
-    /* height: auto; */
+
     object-fit: cover;
     position: absolute;
 
@@ -107,6 +106,7 @@ main  ul li a img {
 
 main ul li a div h3{
     font-size: 1.3em;
+    color: var(--color-text-black);
 }
 
 main ul li a div{
@@ -115,7 +115,7 @@ main ul li a div{
 main ul li a div p {
 
     display: none;
-
+    color: var(--color-text-black);
 }
 
 
@@ -141,10 +141,7 @@ main ul li a div p {
         bottom: 0em;
     } 
 
-    main ul li a div p span {
-        animation: flikkering 2s infinite alternate;  
-        color: var(--neonkleureen);
-    }
+  
 
   
 
@@ -174,7 +171,7 @@ main ul li a div p {
 
         width: 500px;
         padding: 1em;
-        margin: 0.5em;
+
         display: flex;
         flex-direction: row;
         position: relative;
@@ -182,9 +179,7 @@ main ul li a div p {
     }
 
     main > p {
-        /* position: absolute; */
-        /* max-width: 25em; */
-        /* font-size: 1.5em; */
+      
         top: 2em;
     }
 }
