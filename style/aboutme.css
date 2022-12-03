@@ -12,12 +12,6 @@ main {
 
 
 
-
-
-
-
-
-
 main > section:nth-of-type(1){
     min-width: 30em;
     height: fit-content;
@@ -64,27 +58,15 @@ main > section:nth-of-type(1) img {
 
 
 
-
-
-
-
-
-
-
-
-
 main > section:nth-of-type(2){
     display: flex;
     flex-direction: column;
     padding: 1em;
     height: fit-content;
     width: 80%;
-    /* justify-content: center; */
     align-items: center;
     gap: 3em;
-
 }
-
 
 
 
@@ -106,19 +88,15 @@ main section:nth-of-type(2) p {
 
 
 main > section:nth-of-type(2) section {
-    /* width: 40%; */
     width: 80%;
-
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* padding-left: 3em; */
     background-color: var(--color-white);
     border: var(--neonkleureen) 1px solid;
     box-shadow:
       0 0 7px var(--color-text);
       transform: rotate(4deg);
-
 } 
 
 
@@ -128,17 +106,16 @@ main > section:nth-of-type(2) section {
 
 main > section:nth-of-type(2) div {
     width: 80%;
-
     display: flex;
     align-items: center;
     flex-direction: column;
-
     background-color: var(--color-white);
     border: var(--neonkleureen) 1px solid;
     box-shadow:
       0 0 7px var(--color-text);
       transform: rotate(-2deg);
 }
+
 main > section:nth-of-type(2) div p {
     margin-bottom: 2em;
 }
@@ -205,6 +182,6 @@ main > section:nth-of-type(2) a svg {
 
 @media (min-width: 57em) {
     main > section:nth-of-type(2) {
-        max-width: 818px;
+        max-width: 51.125em;
     }
 }
