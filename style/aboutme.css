@@ -123,19 +123,18 @@ main > section:nth-of-type(2) div p {
 
  
 
-main > section:nth-of-type(2) section ul {
+main > section:nth-of-type(2) section {
     display: flex;
     justify-content: left;
     padding: 0;
-
 }
-main > section:nth-of-type(2) section ul li {
-    list-style-type: none;
+main > section:nth-of-type(2) a {
+    padding: 1em;
 }
-
 
 main > section:nth-of-type(2) a svg {
     fill: var(--color-text-black);
+
 }
 
 
