@@ -4,9 +4,7 @@
 /* main *//* main *//* main *//* main *//* main *//* main *//* main */
 /* main *//* main *//* main *//* main *//* main *//* main *//* main */
 
-body {
-    overflow-y: hidden;
-}
+
 main {
     display: flex;
     flex-direction: column;
