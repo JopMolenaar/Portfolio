@@ -9,7 +9,14 @@ main {
     padding-top: 1em;
 }
 
+body {
 
+    width: 100vw;
+
+    background: linear-gradient(194deg, #2C2C2C 42%, rgba(0,0,0,0.3660057773109243) 100%);
+
+
+}
 
 main > section:nth-of-type(1){
 
@@ -144,12 +151,6 @@ main > section:nth-of-type(2) a svg {
 
 
 
-
-@media (min-width: 20.625em){
-    body {
-        height: 100vh;
-    }
-}
 
 
 @media (min-width: 27em) {

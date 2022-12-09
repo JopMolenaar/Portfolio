@@ -3,7 +3,14 @@
 /* main *//* main *//* main *//* main *//* main *//* main *//* main */
 /* main *//* main *//* main *//* main *//* main *//* main *//* main */
 /* main *//* main *//* main *//* main *//* main *//* main *//* main */
+body {
 
+    width: 100vw;
+
+    background: linear-gradient(194deg, #2C2C2C 42%, rgba(0,0,0,0.3660057773109243) 100%);
+    overflow-x: hidden;
+
+}
 
 main {
     display: flex;
@@ -130,7 +137,7 @@ main ul li a div p {
 
     body {
         height: 100vh;
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
     }
     main {
         height: 50em;
