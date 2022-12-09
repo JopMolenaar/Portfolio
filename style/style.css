@@ -26,7 +26,7 @@ body{
     padding: 0;
     position: relative;
     /* cursor: none; */
-    height: 100vh;
+    height: fit-content;
     width: 100vw;
 
     overflow-x: hidden;
@@ -213,7 +213,7 @@ header nav ul li a {
     header nav ul li a {
         font-size: 1em;
     }
-
+ 
 }
 
 
