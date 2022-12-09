@@ -4,7 +4,9 @@
 /* main *//* main *//* main *//* main *//* main *//* main *//* main */
 /* main *//* main *//* main *//* main *//* main *//* main *//* main */
 
-
+body {
+    overflow-y: hidden;
+}
 main {
     display: flex;
     flex-direction: column;
@@ -14,13 +16,24 @@ main {
 }
 
 main > p {
+    
     position: relative;
-    font-size: 1.1em;
+    color: white;
+    font-size: 1em;
     top: 2em;
-    left: 3em;    
-    max-width: 27em;
+    left: 2em;    
+    max-width: 90vw;
     margin-bottom: 1em;
+    z-index: -1;
+    height: fit-content;
 }
+
+
+/* main > p:after {
+
+    color: rgb(0, 255, 255); 
+    mix-blend-mode: difference;
+} */
 
 main ul{
     display: flex;
@@ -34,6 +47,7 @@ main ul{
     padding: 0;
     place-items: center;
     margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 main ul li {
@@ -80,7 +94,7 @@ main ul li a div {
 }
 
 main  ul li a img {
-    width: 20em;
+    width: 16em;
     object-fit: cover;
     position: absolute;
     bottom: 0.1em;
@@ -135,7 +149,7 @@ main ul li a div p {
 @media (min-width: 46em){
 
     main ul{
-        top: 4.7em;
+        top: 6em;
         position: absolute;
         right: 4em;
         width: fit-content;
@@ -157,6 +171,21 @@ main ul li a div p {
 }
 
 
+
+@media (min-width: 23.4375em) {
+    main  ul li a img {
+        width: 20em;
+    }
+}
+
+
+@media (min-width: 37em) {
+    main > p {
+        font-size: 1.1em;
+        max-width: 27em;
+        left: 3em; 
+    }
+}
 @media (min-width: 64em){
     main > p {
         position: absolute;
@@ -181,4 +210,3 @@ main ul li a div p {
         left: 2em;
     }
 }
-
