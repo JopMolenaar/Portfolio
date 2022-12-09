@@ -1,19 +1,21 @@
 
 
 
-
+body {
+    overflow-y: hidden;
+}
 main {
     display: flex;
     flex-direction: column;
     place-items: center;
-    gap: 6em;
-    padding-top: 5em;
+    gap: 2em;
+    padding-top: 1em;
 }
 
 
 
 main > section:nth-of-type(1){
-    min-width: 30em;
+
     height: fit-content;
     display: flex;
     position: relative;
@@ -28,7 +30,7 @@ main > section:nth-of-type(1){
 
 main > section:nth-of-type(1) p {
     max-width: 35em;
-    min-width: 20em;
+
     margin: 1em;
     margin-bottom: 3em;
     line-height: 1.5em;
@@ -65,7 +67,7 @@ main > section:nth-of-type(2){
     height: fit-content;
     width: 80%;
     align-items: center;
-    gap: 3em;
+    gap: 1em;
 }
 
 
@@ -118,6 +120,8 @@ main > section:nth-of-type(2) div {
 
 main > section:nth-of-type(2) div p {
     margin-bottom: 2em;
+    max-width: 90%;
+    font-size: 0.8em;
 }
 
 
@@ -147,9 +151,28 @@ main > section:nth-of-type(2) a svg {
 
 
 
+@media (min-width: 27em) {
+    main {
+        padding-top: 5em;
+        gap: 2em;
+    }
 
+    main > section:nth-of-type(2){
+     
+        gap: 3em;
+    }
+    main > section:nth-of-type(2) div p {
+
+        max-width: none;
+        font-size: 1em;
+    }
+
+}
 
 @media (min-width: 40em) {
+
+  
+
     main > section:nth-of-type(1) img  {
         display: block;
     }
@@ -160,6 +183,7 @@ main > section:nth-of-type(2) a svg {
     main > section:nth-of-type(2) section{
         width: 60%;
     }
+
     
 }
 

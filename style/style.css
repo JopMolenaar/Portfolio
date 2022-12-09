@@ -47,7 +47,18 @@ body{
 
 
 
+body > div {
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    opacity: 0.2;
+    mix-blend-mode: difference;
 
+}
 
 
 
@@ -95,11 +106,16 @@ body{
 /* achtergrond vlak*//* achtergrond vlak*//* achtergrond vlak*//* achtergrond vlak*/
 body {
     background: rgb(0,0,0);
-    background: linear-gradient(194deg, #2C2C2C 42%, rgba(0,0,0,0.3660057773109243) 100%);  
+    background: linear-gradient(194deg, #2C2C2C 42%, rgba(0,0,0,0.3660057773109243) 100%); 
+
 }
 
 
 
+/* body {
+    background-image: linear-gradient(185deg, rgba(31,31,31,1) 0%, rgba(113,113,113,1) 100%) ;
+    height: 100%;
+} */
 
 
 
@@ -118,10 +134,11 @@ header{
     align-items: center;
     justify-content: right;
     position: relative;
-    padding-left: 2em;
-    padding-right: 3em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
     justify-content: center;
     padding-top: 2em;
+    min-width: 18em;
 }
 
 header h1 {
@@ -136,21 +153,15 @@ header h1 {
     left: 0.8em;
 }
 
-header nav {
-    min-width: 18em;
-}
-
-
-
-
-
 
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
     gap: 1em;
+    width: 100%;
     margin-top: 4em;
+    padding-left: 0;
 }
 
 
@@ -159,17 +170,13 @@ header nav ul {
 
 
 
-
-header nav ul li a{
-    text-decoration: none;
-    color: var(--color-links);
-}
 
 
 header nav ul li {
     transform: rotate(10deg);
     background-color: var(--color-white);
     transition: ease-in 0.1s;
+
 }
 
 header nav ul li a {
@@ -180,6 +187,9 @@ header nav ul li a {
     transition: ease-in 0.1s;
     box-shadow:
       0 0 7px var(--color-text);
+      text-decoration: none;
+      font-size: 0.8em;
+
   }
 
 
@@ -198,10 +208,21 @@ header nav ul li a {
 /* main *//* main *//* main *//* main *//* main */
 
 
+@media (min-width: 23em){
+
+    header nav ul li a {
+        font-size: 1em;
+    }
+
+}
+
+
 
 @media (min-width: 37.5em){
     header{
         justify-content: space-between;
+        padding-left: 2em;
+        padding-right: 3em;
     }
 
 
@@ -211,8 +232,11 @@ header nav ul li a {
   
     header nav ul {
         margin-top: 1em;
+
     }
 
+
+   
 }
 
 
