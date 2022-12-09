@@ -1,13 +1,7 @@
 
 
 
-main {
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    gap: 2em;
-    padding-top: 1em;
-}
+
 
 body {
 
@@ -16,6 +10,14 @@ body {
     background: linear-gradient(194deg, #2C2C2C 42%, rgba(0,0,0,0.3660057773109243) 100%);
 
 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 2em;
+    padding-top: 1em;
 }
 
 main > section:nth-of-type(1){
