@@ -8,7 +8,7 @@
 main {
     display: flex;
     flex-direction: column;
-    height: 50em;
+
     color: var(--color-text);
     position: relative;
 }
@@ -125,7 +125,16 @@ main ul li a div p {
 /* Media main *//* Media main *//* Media main *//* Media main *//* Media main */
 
 
+
 @media (min-width: 36em){
+
+    body {
+        height: 100vh;
+        overflow-y: hidden;
+    }
+    main {
+        height: 50em;
+    }
     main ul li a div p {
         display: inline;
         max-width: 13em;
