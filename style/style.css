@@ -111,9 +111,9 @@ body > img {
 
 @media (prefers-color-scheme:dark){
     :root{
-        --background-color: rgb(35, 35, 35);
+        /* --background-color: rgb(35, 35, 35);
 
-        --color-text:white;
+        --color-text:white; */
 
 
     }
