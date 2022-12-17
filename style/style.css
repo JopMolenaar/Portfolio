@@ -71,15 +71,18 @@ body > img {
     filter: var(--background-color);
     width: 100%;
     height: auto;    
+    /* filter: invert(75%); */
 }
 
 :root{
-    --background-color: rgb(250, 250, 250);
+    /* --background-color: rgb(250, 250, 250); */
 
-    --color-text:rgb(19, 19, 19);
+    /* --color-text:rgb(19, 19, 19); */
 
 
+    --background-color: rgb(35, 35, 35);
 
+    --color-text:white;
 
 
 
@@ -114,9 +117,9 @@ body > img {
 
 @media (prefers-color-scheme:dark){
     :root{
-        /* --background-color: rgb(35, 35, 35);
+        --background-color: rgb(35, 35, 35);
 
-        --color-text:white; */
+        --color-text:white;
 
 
     }
