@@ -3,62 +3,70 @@
 /* main *//* main *//* main *//* main *//* main *//* main *//* main */
 /* main *//* main *//* main *//* main *//* main *//* main *//* main */
 /* main *//* main *//* main *//* main *//* main *//* main *//* main */
+
+
 body {
-
     width: 100vw;
-
-    background: linear-gradient(194deg, #2C2C2C 42%, rgba(0,0,0,0.3660057773109243) 100%);
     overflow-x: hidden;
-
 }
+
+
 
 main {
     display: flex;
     flex-direction: column;
-
     color: var(--color-text);
     position: relative;
 }
 
-main > p {
-    
-    position: relative;
+main section {
+    padding-top: 4em;
+    padding: 2em;
+    padding-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    max-width: 62em;
+}
+
+main section h2 {
     color: white;
-    font-size: 1em;
-    top: 2em;
-    left: 2em;    
+    font-size: 1.5em;
+    font-weight: 400;
+
+}
+
+main section p {
+    color: white;
+    width: fit-content;
     max-width: 90vw;
-    margin-bottom: 1em;
+    font-size: 1em;
+    display: flex;
     z-index: -1;
     height: fit-content;
 }
 
 
-/* main > p:after {
 
-    color: rgb(0, 255, 255); 
-    mix-blend-mode: difference;
-} */
+
+
+
+
 
 main ul{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 100vw;
-    height: 50em;
+    z-index: 90;
     gap: 4em;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0;
-    place-items: center;
-    margin-top: 3em;
-    margin-bottom: 3em;
+    padding: 2em;
 }
 
 main ul li {
     list-style: none;
     width: fit-content;
-    justify-content: center;
+
     box-shadow:
       0 0 7px var(--color-text);
       transition: ease-in 0.1s;
@@ -66,10 +74,12 @@ main ul li {
 
 main ul li:nth-child(1){
     transform: rotate(2deg);
+    align-self: flex-start;
 }
 
 main ul li:nth-child(2){
     transform: rotate(-3deg);
+    align-self: flex-end;
 }
 
 main ul li:hover{
@@ -77,20 +87,21 @@ main ul li:hover{
 } 
 
 
+
+
+
+
 main ul li a {
     background-color: var(--color-white);
     width: 80vw;
     max-width: 30em;
-    height: 17.5em;
+    height: 13.5em;
     padding: 1em;
     display: flex;
     flex-direction: row;
     position: relative;
     border: var(--color-white) 1px solid;
 }
-
-
-
 
 main ul li a div {
     display: flex;
@@ -99,7 +110,7 @@ main ul li a div {
 }
 
 main  ul li a img {
-    width: 16em;
+    width: 14em;
     object-fit: cover;
     position: absolute;
     bottom: 0.1em;
@@ -108,6 +119,7 @@ main  ul li a img {
 
 main ul li a div h3{
     font-size: 1.3em;
+    padding-bottom: 1em;
     color: var(--color-text-black);
 }
 
@@ -127,21 +139,35 @@ main ul li a div p {
 
 
 
+
+
+
+
+
 /* Media main *//* Media main *//* Media main *//* Media main *//* Media main */
 /* Media main *//* Media main *//* Media main *//* Media main *//* Media main */
 /* Media main *//* Media main *//* Media main *//* Media main *//* Media main */
+
+@media (min-width: 23.4375em) {
+
+    main  ul li a img {
+        width: 20em;
+    }
+
+    main ul li a {
+        height: 17.5em;
+    }
+}
 
 
 
 @media (min-width: 36em){
 
-    body {
-        height: 100vh;
-        /* overflow-y: hidden; */
+    main section {
+        padding: 5em;
+        padding-bottom: 7em;
     }
-    main {
-        height: 50em;
-    }
+
     main ul li a div p {
         display: inline;
         max-width: 13em;
@@ -153,22 +179,16 @@ main ul li a div p {
     } 
 }
 
-@media (min-width: 40em) {
-    main > p {
-        max-width: 30em;
+@media (min-width: 37em) {
+
+    main section p {
+        font-size: 1.1em;
     }
 }
 
 
+
 @media (min-width: 46em){
-
-    main ul{
-        top: 6em;
-        position: absolute;
-        right: 4em;
-        width: fit-content;
-    }
-
 
     main ul li a {
         width: 31.25em;
@@ -176,51 +196,46 @@ main ul li a div p {
         display: flex;
         flex-direction: row;
         position: relative;
-       
+    }
+}
+
+@media (min-width: 55.2em){
+
+    main section {
+        flex-direction: row;
+        width: 90vw;
+        justify-content: space-around;
+        place-self: center;
     }
 
-    main > p {
-        top: 2em;
+    main section p {
+        max-width: 21em;
+    }
+
+    main section h2 {
+        width: 11em;
     }
 }
 
 
-
-@media (min-width: 23.4375em) {
-    main  ul li a img {
-        width: 20em;
-    }
-}
-
-
-@media (min-width: 37em) {
-    main > p {
-        font-size: 1.1em;
-        max-width: 27em;
-        left: 3em; 
-    }
-}
 @media (min-width: 64em){
-    main > p {
-        position: absolute;
+    
+    main section p {
         max-width: 22em;
         font-size: 1.2em;
-        top: 6.4em;
-        left: 2em;
         }
-
-    main ul {
-       top: 0em;
-    }
 }
 
+@media (min-width: 66em){
 
-@media (min-width: 70em){
-    main > p {
-        position: absolute;
-        max-width: 22em;
-        font-size: 1.5em;
-        top: 4.8em;
-        left: 2em;
+    main section {
+        padding-bottom: 15em;
+    }
+
+
+
+    main ul{
+        flex-direction: row;
+        justify-content: center;
     }
 }
