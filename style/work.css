@@ -2,6 +2,7 @@
 
 
 main {
+    
     display: flex;
     flex-direction: column;
     gap: 3em;
@@ -28,8 +29,13 @@ main section img {
     width: 80%;
 }
 
+main section h2 {
+    color: white;
+}
+
 main section p {
     max-width: 37em;
+    color: white;
 }
 
 
@@ -75,6 +81,8 @@ main section div:nth-child(3) p {
     box-shadow:
     0 0 7px var(--color-text);
     color: var(--color-text-black);
+    
+
 }
 
 main section div:nth-child(3) a {
