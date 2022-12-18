@@ -31,14 +31,14 @@ main section {
 }
 
 main section h2 {
-    color: white;
+color: var(--color-text);
     font-size: 1.5em;
     font-weight: 400;
 
 }
 
 main section p {
-    color: white;
+    color: var(--color-text);
     width: fit-content;
     max-width: 90vw;
     font-size: 1em;
