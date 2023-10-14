@@ -1,0 +1,176 @@
+/* main */ /* main */ /* main */ /* main */ /* main */ /* main */ /* main */
+/* main */ /* main */ /* main */ /* main */ /* main */ /* main */ /* main */
+/* main */ /* main */ /* main */ /* main */ /* main */ /* main */ /* main */
+/* main */ /* main */ /* main */ /* main */ /* main */ /* main */ /* main */
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text);
+  position: relative;
+}
+main section {
+  padding-top: 4em;
+  padding: 2em;
+  padding-bottom: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  max-width: 62em;
+}
+main section h2 {
+  color: var(--color-text);
+  font-size: 5em;
+  font-weight: 400;
+  z-index: 2;
+}
+main section p {
+  color: var(--color-text);
+  width: fit-content;
+  max-width: 90vw;
+  font-size: 1em;
+  display: flex;
+  z-index: 2;
+  height: fit-content;
+}
+main ul {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  z-index: 90;
+  gap: 4em;
+  padding: 2em;
+}
+main ul li {
+  list-style: none;
+  width: fit-content;
+  box-shadow: 0 0 7px var(--color-text);
+  transition: ease-in 0.1s;
+}
+main ul li a {
+  background-color: var(--color-white);
+  width: 80vw;
+  max-width: 30em;
+  height: 13.5em;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  border: var(--color-white) 1px solid;
+}
+main ul li a div {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text-black);
+  position: relative;
+}
+main ul li a div h3 {
+  font-size: 1.3em;
+  padding-bottom: 1em;
+  color: var(--color-text-black);
+}
+main ul li a div p {
+  display: none;
+  color: var(--color-text-black);
+}
+main ul li a img {
+  width: 14em;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0.1em;
+  right: 0.1em;
+}
+main ul li:nth-child(1) {
+  transform: rotate(2deg);
+  align-self: flex-start;
+}
+main ul li:nth-child(2) {
+  transform: rotate(-3deg);
+  align-self: flex-end;
+}
+main ul li:hover {
+  transform: rotate(0deg);
+}
+
+/* Media main */ /* Media main */ /* Media main */ /* Media main */ /* Media main */
+/* Media main */ /* Media main */ /* Media main */ /* Media main */ /* Media main */
+/* Media main */ /* Media main */ /* Media main */ /* Media main */ /* Media main */
+@media (min-width: 23.4375em) {
+  main ul li a {
+    height: 17.5em;
+  }
+  main ul li a img {
+    width: 20em;
+  }
+}
+@media (min-width: 36em) {
+  main section {
+    padding: 5em;
+    padding-bottom: 7em;
+  }
+  main ul li a div p {
+    display: inline;
+    max-width: 13em;
+  }
+  main ul li a div p:nth-of-type(2) {
+    position: absolute;
+    bottom: 0em;
+  }
+}
+@media (min-width: 37em) {
+  main section p {
+    font-size: 1.1em;
+  }
+}
+@media (min-width: 46em) {
+  main ul li a {
+    width: 31.25em;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+}
+@media (min-width: 55.2em) {
+  main section {
+    flex-direction: row;
+    width: 90vw;
+    justify-content: space-around;
+    place-self: center;
+  }
+  main section p {
+    max-width: 21em;
+  }
+  main section h2 {
+    width: 11em;
+  }
+}
+@media (min-width: 64em) {
+  main section p {
+    max-width: 22em;
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 66em) {
+  main section {
+    padding-bottom: 15em;
+  }
+  main ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media (min-width: 66em) {
+  main section {
+    padding-bottom: 15em;
+  }
+  main ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

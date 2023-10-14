@@ -1,0 +1,141 @@
+/* algemeen */ /* algemeen */ /* algemeen */ /* algemeen */
+/* algemeen */ /* algemeen */ /* algemeen */ /* algemeen */
+/* algemeen */ /* algemeen */ /* algemeen */ /* algemeen */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Rajdhani", sans-serif;
+}
+
+p,
+a,
+button,
+summary {
+  font-family: "Montserrat", sans-serif;
+}
+
+button,
+summary {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+img {
+  width: 100px;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: var(--background-color);
+}
+
+/* The hide class */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+:root {
+  --background-color: rgb(15, 15, 15);
+  --color-text: rgb(224, 224, 224);
+  --color-text-black: black;
+  --color-white: #c1c1c1;
+  --color-direct-background: rgba(44, 44, 44, 0.63);
+  --neonkleureen: rgb(182, 182, 182);
+  --gradient-white: linear-gradient(194deg, #c1c1c1 100%, #ffffff 100%);
+  --color-div: rgb(0, 0, 0);
+}
+
+header {
+  margin: 0.5em;
+  padding-bottom: 2em;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  justify-content: center;
+  padding-top: 1em;
+  min-width: 18em;
+  padding-left: 2em;
+  padding-right: 3em;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  width: 100%;
+  margin-top: 1em;
+  padding-left: 0;
+}
+header nav ul a {
+  color: var(--color-white);
+  padding: 1em;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+@media (min-width: 23em) {
+  header nav ul li a {
+    font-size: 1em;
+  }
+}
+/* The hide class */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Eind algemeen */ /* Eind algemeen */ /* Eind algemeen */ /* Eind algemeen */
+/* Eind algemeen */ /* Eind algemeen */ /* Eind algemeen */ /* Eind algemeen */
+/* Circle */
+body > div {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  border: rgb(132, 11, 11) solid 2px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  z-index: 80;
+  transition: 100ms ease-out;
+}
+
+@media (min-width: 55em) {
+  body > div {
+    display: block;
+  }
+}
