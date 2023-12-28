@@ -1,25 +1,25 @@
-const cursor = document.querySelector("body > div");
-const body = document.querySelector("body");
+// const cursor = document.querySelector("body > div");
+// const body = document.querySelector("body");
 
-body.addEventListener("mousemove", (e) => {
-  cursor.setAttribute(
-    "style",
-    "top: " + (e.pageY - 35) + "px; left: " + (e.pageX - 35) + "px;"
-  );
-});
+// body.addEventListener("mousemove", (e) => {
+//   cursor.setAttribute(
+//     "style",
+//     "top: " + (e.pageY - 35) + "px; left: " + (e.pageX - 35) + "px;"
+//   );
+// });
 
-var i = 0;
-var txt = "           Hoi,               ik ben Jop"; // spaces are for the time between Hoi and ik ben jop
-var speed = 70;
+// var i = 0;
+// var txt = "           Hoi,               ik ben Jop"; // spaces are for the time between Hoi and ik ben jop
+// var speed = 70;
 
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("type").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-typeWriter();
+// function typeWriter() {
+//   if (i < txt.length) {
+//     document.getElementById("type").innerHTML += txt.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, speed);
+//   }
+// }
+// typeWriter();
 
 // var isInViewport = function (elem) {
 //   var distance = elem.getBoundingClientRect();
