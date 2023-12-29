@@ -65,9 +65,15 @@ body {
 // MAIN
 
 main {
+    background-image: url("../../images/strddlePlanche.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    position: relative;
     div {
+        z-index: 999;
         width: 100vw;
         height: 100vh;
         scroll-snap-type: y mandatory;
@@ -77,32 +83,40 @@ main {
             display: flex;
             width: 100vw;
             height: 100vh;
-            // border: #000000 solid 10px;
             scroll-snap-align: start;
-            background-color: white;
-            // &:nth-of-type(even) {
-            //     background-color: #c1c1c1;
-            // }
+            color: white;
+            background-color: black;
         }
-        // Calisthenics img + name
+        // Name
         section:first-of-type {
-            display: flex;
             position: relative;
+            opacity: 50%;
             h1 {
+                width: 100%;
+                text-align: center;
+                font-weight: 200;
+                font-size: 3em;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
-            img {
-                display: block;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
         }
         // Projects
         section:nth-of-type(2) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3em;
+            h2 {
+                padding: 2em;
+            }
+            ul {
+                li {
+                    list-style: none;
+                    border: white 2px solid;
+                }
+            }
         }
         // About me
         section:nth-of-type(3) {
@@ -111,4 +125,15 @@ main {
         section:nth-of-type(4) {
         }
     }
+    // Calisthenics img
+    // img {
+    //     position: absolute;
+    //     display: block;
+    //     height: 100%;
+    //     width: 100%;
+    //     object-fit: cover;
+    //     top: 0;
+    //     left: 0;
+    //     opacity: 10%;
+    // }
 }
