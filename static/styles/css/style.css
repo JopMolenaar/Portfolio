@@ -73,6 +73,7 @@ main > div:first-child {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   scroll-snap-stop: always;
+  scroll-behavior: smooth;
 }
 main > div:first-child > section {
   display: flex;
@@ -137,12 +138,51 @@ main > div:first-child > section:nth-of-type(2) ul li a img {
   object-fit: cover;
 }
 main > div:first-child > section:nth-of-type(3) {
-  display: grid;
-  flex-direction: column;
+  display: flex;
   align-items: center;
+  flex-direction: column;
+}
+main > div:first-child > section:nth-of-type(3) div {
+  width: 100%;
+  height: 70vh;
+  display: grid;
   padding: 3em;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 22em 1fr 1fr;
+  grid-template-rows: 8em 10em 1fr;
+  max-width: 60em;
+}
+main > div:first-child > section:nth-of-type(3) div h2 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  place-self: center;
+}
+main > div:first-child > section:nth-of-type(3) div > section:nth-of-type(1) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+main > div:first-child > section:nth-of-type(3) div > section:nth-of-type(3) {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  display: flex;
+  flex-direction: column;
+}
+main > div:first-child > section:nth-of-type(3) div > section:nth-of-type(3) h3 {
+  margin-bottom: 1em;
+}
+main > div:first-child > section:nth-of-type(3) > section {
+  width: 100%;
+  height: 30vh;
+}
+main > div:first-child > section:nth-of-type(3) > section img {
+  width: 20px;
+  height: 20px;
 }
 main > div:first-child > section:nth-of-type(4) {
   display: flex;

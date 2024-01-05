@@ -113,3 +113,31 @@ const handleScroll = () => {
 
 // Attach the scroll event listener to the window object
 list.addEventListener("scroll", handleScroll);
+
+const scrollYPerView = list.clientHeight;
+list.addEventListener("wheel", function (event) {
+    event.preventDefault();
+    if (event.deltaY > 0) {
+        scrollDown();
+    } else {
+        scrollUp();
+    }
+});
+
+function scrollUp() {
+    let currentScrollY = list.scrollTop;
+    list.scroll({
+        top: currentScrollY - scrollYPerView,
+        left: 0,
+        behavior: "smooth",
+    });
+}
+
+function scrollDown() {
+    let currentScrollY = list.scrollTop;
+    list.scroll({
+        top: currentScrollY + scrollYPerView,
+        left: 0,
+        behavior: "smooth",
+    });
+}
