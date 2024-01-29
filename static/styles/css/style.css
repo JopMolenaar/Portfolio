@@ -138,6 +138,7 @@ main > div:first-child > section:nth-of-type(2) ul li a img {
   object-fit: cover;
 }
 main > div:first-child > section:nth-of-type(3) {
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -147,7 +148,7 @@ main > div:first-child > section:nth-of-type(3) div {
   height: 70vh;
   display: grid;
   padding: 3em;
-  grid-template-columns: 22em 1fr 1fr;
+  grid-template-columns: 8em 1fr 1fr;
   grid-template-rows: 8em 10em 1fr;
   max-width: 60em;
 }
@@ -177,6 +178,8 @@ main > div:first-child > section:nth-of-type(3) div > section:nth-of-type(3) h3 
   margin-bottom: 1em;
 }
 main > div:first-child > section:nth-of-type(3) > section {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -200,7 +203,7 @@ main > div:first-child > section:nth-of-type(4) form {
   padding: 0.5em;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 87%;
   max-width: 40em;
   align-content: space-between;
 }
