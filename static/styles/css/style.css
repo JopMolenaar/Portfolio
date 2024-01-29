@@ -187,6 +187,8 @@ main > div:first-child > section:nth-of-type(3) > section {
 main > div:first-child > section:nth-of-type(3) > section img {
   width: 20%;
   height: auto;
+  max-height: 8em;
+  max-width: 8em;
 }
 main > div:first-child > section:nth-of-type(4) {
   display: flex;
