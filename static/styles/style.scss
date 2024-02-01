@@ -19,6 +19,7 @@ h4 {
 
 p,
 a,
+li,
 button,
 summary {
     font-family: "Montserrat", sans-serif;
@@ -174,11 +175,8 @@ main {
                 width: 100%;
                 height: 70vh;
                 display: grid;
-                // place-items: center;
-                // flex-direction: row;
-                // align-items: center;
                 padding: 3em;
-                grid-template-columns: 8em 1fr 1fr;
+                grid-template-columns: 10em 1fr 1fr;
                 grid-template-rows: 8em 10em 1fr;
                 max-width: 60em;
                 h2 {
@@ -211,19 +209,24 @@ main {
                         margin-bottom: 1em;
                     }
                 }
-            }
-            // Images
-            > section {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                display: flex;
-                flex-wrap: wrap;
-                img {
-                    width: 20%;
-                    height: auto;
-                    max-height: 8em;
-                    max-width: 8em;
+                // Images
+                > section:nth-of-type(4) {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+                    grid-template-rows: 1fr 1fr;
+                    height: fit-content;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        max-height: 8em;
+                        max-width: 8em;
+                        min-width: 6em;
+                        object-fit: cover;
+                    }
                 }
             }
         }
@@ -255,7 +258,6 @@ main {
                         font-size: 1em;
                         margin-top: 0.5em;
                         padding: 0.2em;
-                        // border-radius: 0.5em;
                     }
                     textarea {
                         margin-top: 0.5em;
@@ -282,5 +284,68 @@ main {
         background-repeat: no-repeat;
         z-index: -1;
         transition: 500ms;
+    }
+}
+
+@media (min-width: 53.5em) {
+    main {
+        > div:first-child {
+            > section:nth-of-type(3) {
+                div {
+                    height: 90vh;
+                    grid-template-columns: 1fr 1.5fr 1fr;
+                    grid-template-rows: 8em 1fr 3fr;
+                    max-width: 90vw;
+                    // who am I section
+                    > section:nth-of-type(3) {
+                        padding-left: 2em;
+                        padding-right: 2em;
+                        grid-column-start: 2;
+                        grid-column-end: 3;
+                    }
+                    // Images
+                    > section:nth-of-type(4) {
+                        display: grid;
+                        grid-template-columns: repeat(
+                            auto-fit,
+                            minmax(6em, 1fr)
+                        );
+                        height: fit-content;
+                        position: relative;
+                        grid-column-start: 3;
+                        grid-column-end: 4;
+                        img {
+                            width: 100%;
+                            height: auto;
+                            min-width: 6em;
+                            max-width: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 95em) {
+    main {
+        > div:first-child {
+            > section:nth-of-type(3) {
+                div {
+                    grid-template-columns: 1fr 3fr 1fr;
+                    // Images
+                    > section:nth-of-type(3) {
+                        padding-left: 5em;
+                        padding-right: 5em;
+                    }
+                    > section:nth-of-type(4) {
+                        grid-template-columns: 1fr 1fr 1fr;
+                        max-width: fit-content;
+                        img {
+                            max-width: 8em;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
