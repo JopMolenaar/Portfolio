@@ -175,10 +175,11 @@ main {
                 width: 100%;
                 height: 70vh;
                 display: grid;
+                padding-top: 3em;
                 padding: 3em;
                 grid-template-columns: 10em 1fr 1fr;
-                grid-template-rows: 8em 10em 1fr;
-                max-width: 60em;
+                grid-template-rows: 8em 10em 10em 1fr;
+                max-width: 70em;
                 h2 {
                     grid-column-start: 1;
                     grid-column-end: 4;
@@ -191,22 +192,33 @@ main {
                 > section:nth-of-type(1) {
                     grid-column-start: 1;
                     grid-column-end: 2;
-                    grid-row-start: 3;
-                    grid-row-end: 4;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
                 }
                 // soft skills
                 > section:nth-of-type(2) {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 3;
+                    grid-row-end: 4;
                 }
                 // who am I section
                 > section:nth-of-type(3) {
                     grid-column-start: 2;
                     grid-column-end: 4;
                     grid-row-start: 2;
-                    grid-row-end: 4;
+                    grid-row-end: 5;
                     display: flex;
                     flex-direction: column;
+                    width: fit-content;
+                    margin-left: auto;
+                    margin-right: auto;
                     h3 {
                         margin-bottom: 1em;
+                    }
+                    p {
+                        max-width: 40em;
+                        min-width: 20em;
                     }
                 }
                 // Images
@@ -294,8 +306,9 @@ main {
                 div {
                     height: 90vh;
                     grid-template-columns: 1fr 1.5fr 1fr;
-                    grid-template-rows: 8em 1fr 3fr;
                     max-width: 90vw;
+                    padding: 0em;
+                    padding-top: 3em;
                     // who am I section
                     > section:nth-of-type(3) {
                         padding-left: 2em;
@@ -308,7 +321,7 @@ main {
                         display: grid;
                         grid-template-columns: repeat(
                             auto-fit,
-                            minmax(6em, 1fr)
+                            minmax(5em, 1fr)
                         );
                         height: fit-content;
                         position: relative;
@@ -317,7 +330,7 @@ main {
                         img {
                             width: 100%;
                             height: auto;
-                            min-width: 6em;
+                            min-width: 5em;
                             max-width: none;
                         }
                     }
@@ -326,7 +339,7 @@ main {
         }
     }
 }
-@media (min-width: 95em) {
+@media (min-width: 60em) {
     main {
         > div:first-child {
             > section:nth-of-type(3) {
