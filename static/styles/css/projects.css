@@ -1,0 +1,84 @@
+main > section:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  padding: 3em;
+}
+main > section:nth-of-type(2) h2 {
+  padding: 1.5em;
+}
+main > section:nth-of-type(2) ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+  max-width: 70em;
+}
+main > section:nth-of-type(2) ul li {
+  padding: 0em;
+  list-style: none;
+  width: 100%;
+  height: 38vh;
+  max-height: 24em;
+  position: relative;
+}
+main > section:nth-of-type(2) ul li a {
+  transition: 300ms;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+  justify-content: space-between;
+}
+main > section:nth-of-type(2) ul li a > div {
+  width: 100%;
+  padding: 2em;
+}
+main > section:nth-of-type(2) ul li a > div h3 {
+  margin-bottom: 1em;
+}
+main > section:nth-of-type(2) ul li a img {
+  mask-image: linear-gradient(0deg, var(--transparent) 0%, var(--background-color) 50%, var(--transparent) 100%);
+  -webkit-mask-image: linear-gradient(0deg, var(--transparent) 0%, var(--background-color) 50%, var(--transparent) 100%);
+  width: 24em;
+  height: 100%;
+  object-fit: cover;
+}
+main > section:nth-of-type(2) ul li a:hover {
+  background-color: var(--light-hover);
+}
+main > section:nth-of-type(2) ul li:nth-child(even) img {
+  order: -1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  main > section:nth-of-type(2) ul li::before, main > section:nth-of-type(2) ul li::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: #ccc;
+    transition: 1s;
+    animation: slide;
+    animation: border-slide 3s linear forwards;
+  }
+  main > section:nth-of-type(2) ul li::before {
+    top: 0;
+  }
+  main > section:nth-of-type(2) ul li::after {
+    bottom: 0;
+  }
+  main > section:nth-of-type(2) ul li:nth-child(odd)::after, main > section:nth-of-type(2) ul li:nth-child(odd)::before {
+    right: 0;
+  }
+  @keyframes border-slide {
+    to {
+      width: 100%;
+    }
+  }
+}

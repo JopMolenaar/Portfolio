@@ -7,33 +7,33 @@
  */
 
 // Select the image element
-const image = document.querySelector("div:nth-of-type(2)");
-const list = document.querySelector("main > div:first-child");
+// const image = document.querySelector("div:nth-of-type(2)");
+// const list = document.querySelector("main > div:first-child");
 
-let previousScrollPosition = list.scrollTop;
-let newPosition = 0;
-let prevNewPosition = 0;
-const maxTranslate = 300;
+// let previousScrollPosition = list.scrollTop;
+// let newPosition = 0;
+// let prevNewPosition = 0;
+// const maxTranslate = 300;
 
-// Function to handle the scroll event and set a translate value on the img
-const handleScroll = () => {
-    requestAnimationFrame(() => {
-        const scrollDistance = list.scrollTop - previousScrollPosition;
-        // Calculate the new image position based on the scroll distance and speed ratio
-        newPosition = newPosition + scrollDistance;
+// // Function to handle the scroll event and set a translate value on the img
+// const handleScroll = () => {
+//     requestAnimationFrame(() => {
+//         const scrollDistance = list.scrollTop - previousScrollPosition;
+//         // Calculate the new image position based on the scroll distance and speed ratio
+//         newPosition = newPosition + scrollDistance;
 
-        if (newPosition < prevNewPosition) {
-            image.style.transform = `translateY(0px)`;
-        } else {
-            if (newPosition > maxTranslate) {
-                image.style.transform = `translateY(-${maxTranslate}px)`;
-            } else {
-                image.style.transform = `translateY(-${newPosition}px)`;
-            }
-        }
-        prevNewPosition = newPosition;
-        previousScrollPosition = list.scrollTop;
-    });
-};
+//         if (newPosition < prevNewPosition) {
+//             image.style.transform = `translateY(0px)`;
+//         } else {
+//             if (newPosition > maxTranslate) {
+//                 image.style.transform = `translateY(-${maxTranslate}px)`;
+//             } else {
+//                 image.style.transform = `translateY(-${newPosition}px)`;
+//             }
+//         }
+//         prevNewPosition = newPosition;
+//         previousScrollPosition = list.scrollTop;
+//     });
+// };
 
-list.addEventListener("scroll", handleScroll);
+// list.addEventListener("scroll", handleScroll);
