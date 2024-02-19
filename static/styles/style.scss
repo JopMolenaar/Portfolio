@@ -58,6 +58,21 @@ summary {
     --light-hover: rgba(255, 255, 255, 0.05);
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: rgb(33, 33, 33);
+        --color-text: rgb(224, 224, 224);
+        --color-text-black: black;
+        --color-white: #c1c1c1;
+        --color-direct-background: rgba(44, 44, 44, 0.63);
+        --neonkleureen: rgb(182, 182, 182);
+        --gradient-white: linear-gradient(194deg, #c1c1c1 100%, #ffffff 100%);
+        --color-div: rgb(0, 0, 0);
+        --transparent: rgba(0, 0, 0, 0);
+        --light-hover: rgba(255, 255, 255, 0.05);
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -73,7 +88,6 @@ main {
     > section {
         display: flex;
         width: 100vw;
-        height: 100vh;
         color: white;
     }
 }
