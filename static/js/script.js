@@ -2,38 +2,25 @@
  * @Authors:            Jop Molenaar
  * @Date created:       29-01-2024
  * @Date updated:       29-01-2024
- * @Description:        This file makes the first scroll animation where the photo of
- *                      me goes up slower then the sections do.
+ * @Description:        
  */
 
-// Select the image element
-// const image = document.querySelector("div:nth-of-type(2)");
-// const list = document.querySelector("main > div:first-child");
+const scrollers = document.querySelectorAll(".scroller");
 
-// let previousScrollPosition = list.scrollTop;
-// let newPosition = 0;
-// let prevNewPosition = 0;
-// const maxTranslate = 300;
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    addAnimation();
+}
 
-// // Function to handle the scroll event and set a translate value on the img
-// const handleScroll = () => {
-//     requestAnimationFrame(() => {
-//         const scrollDistance = list.scrollTop - previousScrollPosition;
-//         // Calculate the new image position based on the scroll distance and speed ratio
-//         newPosition = newPosition + scrollDistance;
+function addAnimation() {
+    scrollers.forEach((scroller)=>{
+        scroller.setAttribute("data-animated", true);
+        const scrollerInner = scroller.querySelector(".scroller_inner");
+        const scrollerContent = Array.from(scrollerInner.children);
 
-//         if (newPosition < prevNewPosition) {
-//             image.style.transform = `translateY(0px)`;
-//         } else {
-//             if (newPosition > maxTranslate) {
-//                 image.style.transform = `translateY(-${maxTranslate}px)`;
-//             } else {
-//                 image.style.transform = `translateY(-${newPosition}px)`;
-//             }
-//         }
-//         prevNewPosition = newPosition;
-//         previousScrollPosition = list.scrollTop;
-//     });
-// };
-
-// list.addEventListener("scroll", handleScroll);
+        scrollerContent.forEach((item)=>{
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+        })
+    });
+}
