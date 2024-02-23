@@ -13,6 +13,7 @@ main {
             grid-template-columns: 1fr;
             grid-template-rows: 8em fit-content 1fr 1fr;
             h2 {
+                color: var(--color-text);
                 grid-column-start: 1;
                 grid-column-end: 3;
                 grid-row-start: 1;
@@ -33,11 +34,12 @@ main {
                 margin-right: auto;
                 padding: 1em;
                 h3 {
+                    color: var(--color-text);
                     margin-bottom: 1em;
                 }
                 p {
+                    color: var(--color-text);
                     max-width: 40em;
-                    min-width: 20em;
                 }
             }
             // skills

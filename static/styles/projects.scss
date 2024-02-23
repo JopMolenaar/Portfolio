@@ -8,6 +8,7 @@ main {
         padding: 3em;
         h2 {
             padding: 1.5em;
+            color: var(--color-text);
         }
         ul {
             display: flex;
@@ -49,7 +50,7 @@ main {
                         object-fit: cover;
                     }
                 }
-                a:hover {
+                button:hover {
                     background-color: var(--light-hover);
                 }
             }
@@ -73,7 +74,7 @@ main {
                     position: absolute;
                     width: 0%;
                     height: 1px;
-                    background-color: #ccc;
+                    background-color: var(--color-black);
                     transition: 1s;
                     animation: slide;
                     animation: border-slide 3s linear forwards;

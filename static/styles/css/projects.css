@@ -7,6 +7,7 @@ main > section:nth-of-type(2) {
 }
 main > section:nth-of-type(2) h2 {
   padding: 1.5em;
+  color: var(--color-text);
 }
 main > section:nth-of-type(2) ul {
   display: flex;
@@ -50,7 +51,7 @@ main > section:nth-of-type(2) ul li button img {
   max-height: 30em;
   object-fit: cover;
 }
-main > section:nth-of-type(2) ul li a:hover {
+main > section:nth-of-type(2) ul li button:hover {
   background-color: var(--light-hover);
 }
 
@@ -66,7 +67,7 @@ main > section:nth-of-type(2) ul li a:hover {
     position: absolute;
     width: 0%;
     height: 1px;
-    background-color: #ccc;
+    background-color: var(--color-black);
     transition: 1s;
     animation: slide;
     animation: border-slide 3s linear forwards;

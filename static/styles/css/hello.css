@@ -5,6 +5,7 @@ main > section:first-of-type {
   align-items: center;
 }
 main > section:first-of-type h1 {
+  color: var(--color-text);
   width: 100%;
   text-align: center;
   font-weight: 200;
