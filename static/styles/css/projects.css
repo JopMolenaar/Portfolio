@@ -21,7 +21,8 @@ main > section:nth-of-type(2) ul li {
   width: 100%;
   position: relative;
 }
-main > section:nth-of-type(2) ul li a {
+main > section:nth-of-type(2) ul li button {
+  all: unset;
   transition: 300ms;
   height: 100%;
   width: 100%;
@@ -33,17 +34,17 @@ main > section:nth-of-type(2) ul li a {
   position: relative;
   justify-content: space-between;
 }
-main > section:nth-of-type(2) ul li a > div {
+main > section:nth-of-type(2) ul li button > div {
   width: 100%;
   padding-top: 1em;
 }
-main > section:nth-of-type(2) ul li a > div h3 {
+main > section:nth-of-type(2) ul li button > div h3 {
   margin-bottom: 1em;
 }
-main > section:nth-of-type(2) ul li a > div p {
+main > section:nth-of-type(2) ul li button > div p {
   margin-bottom: 1em;
 }
-main > section:nth-of-type(2) ul li a img {
+main > section:nth-of-type(2) ul li button img {
   z-index: -1;
   width: 100%;
   max-height: 30em;
@@ -106,14 +107,14 @@ main > section:nth-of-type(2) ul li a:hover {
     height: 38vh;
     max-height: 24em;
   }
-  main > section:nth-of-type(2) ul li a {
+  main > section:nth-of-type(2) ul li button {
     flex-direction: row;
   }
-  main > section:nth-of-type(2) ul li a img {
+  main > section:nth-of-type(2) ul li button img {
     height: 100%;
     width: 24em;
   }
-  main > section:nth-of-type(2) ul li a > div {
+  main > section:nth-of-type(2) ul li button > div {
     padding: 2em;
   }
   main > section:nth-of-type(2) ul li:nth-child(even) img {

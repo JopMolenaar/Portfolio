@@ -9,6 +9,7 @@
         <link href="styles/css/projects.css" rel="stylesheet" />
         <link href="styles/css/about.css" rel="stylesheet" />
         <link href="styles/css/contact.css" rel="stylesheet" />
+        <link href="styles/css/projectInfo.css" rel="stylesheet" />
         <link rel="icon" href="images/iconportfoliozwart.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,8 +36,7 @@
                 <h2>Projects</h2>
                 <ul>
                     <li>
-                        <a href="project-pages/check-in-individual.html"
-                            >
+                        <button>
                             <div>
                                 <h3>IoT check-in system</h3>
                                 <p>I made a check in device at my minor IoT</p>
@@ -46,11 +46,11 @@
                                 alt="A photo of the device I made, it is a gray 3D printed case with an angled side towards you inclucing a little screen, 
                                     a place to put your card underneath that, a button in the bottom right corner and two leds, 
                                     red and green, above the screen to show the status of your check in. "
-                        /></a>
+                            />
+                        </button>
                     </li>
                     <li>
-                        <a href="project-pages/check-in-project-team.html"
-                            >
+                        <button>
                             <div>
                                 <h3>IoT check-in system for the HvA (Team)</h3>
                                 <p>
@@ -63,11 +63,11 @@
                                 alt="A photo of the device we made, it is a white 3D printed case with a card slot on the front, 
                                     a square on the top that is lighten up with blue leds, 
                                     and an angled screen behind that to show the event details."
-                        /></a>
+                            />
+                        </button>
                     </li>
                     <li>
-                        <a href="project-pages/cali-project.html"
-                            >
+                        <button>
                             <div>
                                 <h3>Calisthenics workout generator</h3>
                                 <p>
@@ -80,17 +80,17 @@
                                 alt="Mockups of the calisthenics workout generator website. 
                                     It consists out of a laptop and mobile phone with the home page on it, 
                                     and a tablet on the right with the workout plan page."
-                        /></a>
+                            />
+                        </button>
                     </li>
                     <li>
-                        <a href="project-pages/linking-project.html"
-                            >
+                        <button>
                             <div>
                                 <h3>Project - blog</h3>
                                 <p>Coming soon</p>
                             </div>
-                            <img src="images/comingSoon.jpeg" alt="Mockup"
-                        /></a>
+                            <img src="images/comingSoon.jpeg" alt="Mockup" />
+                        </button>
                     </li>
                 </ul>
             </section>
@@ -101,10 +101,10 @@
                     <section>
                         <h3>Who am I?</h3>
                         <p>
-                            Hello, I am Jop Molenaar, 19 years old and I'm studying
-                            Communication and Multi-Media Design on the HvA. I
-                            am interested in full stack development, IoT and
-                            optimising the UX of the product. I also love to
+                            Hello, I am Jop Molenaar, 19 years old and I'm
+                            studying Communication and Multi-Media Design on the
+                            HvA. I am interested in full stack development, IoT
+                            and optimising the UX of the product. I also love to
                             write a lot of logic with Javascript and learning
                             new things. I can work individually but I also
                             worked many times in a team before and I like the
@@ -166,6 +166,24 @@
                     <button type="submit">submit</button>
                 </form>
             </section>
+            <dialog id="dialog">
+                <h4>Title project</h4>
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum."
+                </p>
+                <img src="images/IoTTeamEnclosure.JPG" alt="" />
+                <img src="images/comingSoon.jpeg" alt="" />
+                <form method="dialog">
+                    <button>close</button>
+                </form>
+            </dialog>
         </main>
         <script defer src="js/script.js"></script>
     </body>

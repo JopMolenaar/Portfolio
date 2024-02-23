@@ -24,3 +24,18 @@ function addAnimation() {
         })
     });
 }
+
+const body = document.querySelector("body");
+const dialog = document.querySelector("dialog");
+const closeBtn = document.querySelector("#dialog button");
+const projects = document.querySelectorAll(".projects ul li button");
+projects.forEach((project) => {
+    project.addEventListener("click", () => {
+        dialog.showModal();
+        body.classList.add("modal-open");
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    body.classList.remove("modal-open");
+});

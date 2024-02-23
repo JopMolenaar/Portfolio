@@ -20,7 +20,8 @@ main {
                 list-style: none;
                 width: 100%;
                 position: relative;
-                a {
+                button {
+                    all: unset;
                     transition: 300ms;
                     height: 100%;
                     width: 100%;
@@ -113,7 +114,7 @@ main {
     @keyframes fade-in-projects {
         from {
             opacity: 0;
-        } 
+        }
         to {
             opacity: 1;
         }
@@ -127,13 +128,13 @@ main {
                 li {
                     height: 38vh;
                     max-height: 24em;
-                    a {
+                    button {
                         flex-direction: row;
                         img {
                             height: 100%;
                             width: 24em;
                         }
-                        >div{
+                        > div {
                             padding: 2em;
                         }
                     }
