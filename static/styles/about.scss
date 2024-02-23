@@ -53,7 +53,39 @@ main {
                 flex-direction: column;
                 max-width: 35em;
                 width: 95%;
-                .scroller{
+                .scroller {
+                    padding: 0.25em;
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.8em;
+                        li {
+                            background-color: rgb(70, 70, 70);
+                            border-radius: 10%;
+                            width: fit-content;
+                            padding: 0.5em;
+                            flex-wrap: nowrap;
+                            font-size: 1em;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+                            span:nth-child(1) {
+                                font-size: 0.6em;
+                            }
+                            span:nth-child(2) {
+                                width: 4em;
+                            }
+                            img {
+                                width: 40px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+                .scroller[data-animated="true"] {
                     padding: 0.5em;
                     -webkit-mask: linear-gradient(
                         90deg,
@@ -69,35 +101,9 @@ main {
                         white 80%,
                         transparent
                     );
-                }
-                ul {
-                    display: flex;
-                    flex-wrap: nowrap;
-                    width: max-content;
-                    gap: 0.8em;
-                    li {
-                        background-color: rgb(70, 70, 70);
-                        border-radius: 10%;
-                        width: fit-content;
-                        padding: 0.5em;
+                    ul {
                         flex-wrap: nowrap;
-                        font-size: 1em;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-                            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-                            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-                        span:nth-child(1) {
-                            font-size: 0.6em;
-                        }
-                        span:nth-child(2) {
-                            width: 4em;
-                        }
-                        img {
-                            width: 40px;
-                            height: auto;
-                        }
+                        width: max-content;
                     }
                 }
             }
@@ -179,8 +185,7 @@ main {
     }
 }
 @media (prefers-reduced-motion: no-preference) {
-
-    .scroller ul{
+    .scroller[data-animated="true"] ul{
         animation: scroll 20s forwards linear infinite;
     }
     @keyframes scroll {
