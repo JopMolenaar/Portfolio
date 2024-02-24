@@ -13,7 +13,8 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
     font-family: "Rajdhani", sans-serif;
 }
 
@@ -99,5 +100,12 @@ main {
 @media (prefers-color-scheme: dark){
     input, textarea {
         color-scheme: dark;
+    }
+    #dialog {
+        button {
+            img {
+                filter: invert(100%);
+            }
+        }
     }
 }
