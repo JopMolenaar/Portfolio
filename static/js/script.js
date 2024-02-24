@@ -28,23 +28,41 @@ function addAnimation() {
     });
 }
 
-async function getProjectData(project) {
-    fetch("projects.json", {
-        method: "GET",
-        headers: {
-            Accept: "application/json",
-        },
-    })
-        .then((response) => response.json())
-        .then((response) => {
-            JSON.stringify(response);
-            response.projects.forEach((projectFromData) => {
-                if (projectFromData.name === project) {
+async function getProjectData(project, element) {
+    return new Promise((resolve, reject) => {
+        fetch("projects.json", {
+            method: "GET",
+            headers: {
+                Accept: "application/json",
+            },
+        })
+            .then((response) => response.json())
+            .then((response) => {
+                JSON.stringify(response);
+                const projectFromData = response.projects.find(
+                    (projectData) => projectData.name === project
+                );
+                if (projectFromData) {
                     fillDialog(projectFromData);
-                    return projectFromData;
+                    resolve(projectFromData);
+                } else {
+                    handleUnknownProject(element);
                 }
+            })
+            .catch((error) => {
+                console.error(error);
             });
-        });
+    });
+}
+
+function handleUnknownProject(element) {
+    // Add the 'unknown-project' class to the element
+    element.classList.add("unknown-project");
+
+    // Remove the 'unknown-project' class after 1000 milliseconds (1 second)
+    setTimeout(() => {
+        element.classList.remove("unknown-project");
+    }, 600);
 }
 
 function fillDialog(project) {
@@ -69,7 +87,7 @@ function fillDialog(project) {
 
 projects.forEach((project) => {
     project.addEventListener("click", async () => {
-        getProjectData(project.dataset.project);
+        getProjectData(project.dataset.project, project);
     });
 });
 closeBtn.addEventListener("click", () => {

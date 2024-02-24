@@ -37,11 +37,19 @@ main {
                 }
             }
             button {
+                all: unset;
+                border: 1px solid var(--color-gray);
+                text-align: center;
                 align-self: flex-end;
                 width: 7em;
                 margin: 0.5em;
                 margin-top: 3em;
                 padding: 0.4em;
+                transition: 200ms;
+            }
+            button:hover {
+                background-color: var(--color-gray);    
+                color: var(--color-white);        
             }
         }
     }
