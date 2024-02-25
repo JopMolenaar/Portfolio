@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "IoT check-in system",
-            "article": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "article": "At my IoT minor (HBO-ICT) I had to make a check-in system where people could check in and out. I had to make a physical product using a WeMos D1 mini, 2 output and 2 input senors, and a web enviroment that communicates with the physical device, build with HTML, CSS, JS and php. I did not have to set up the whole docker environment by myself because that was done by the teachers. I had no experience with php, sql, phpMyAdmin, embedded systems, writing C++, making wiring diagrams and system architectures. And the new learning sytem from the HvA was basically learning it all by yourself with the option to ask questions to teachers and co-students.The minor went really well, I learned a lot and found it super interesting to make a IoT product. I finished this project with a 8.5.",
             "linkToRepo": "",
             "images": ["images/IoTTeamEnclosure.JPG", "images/comingSoon.jpeg"],
             "usedSkills": ["", ""]
