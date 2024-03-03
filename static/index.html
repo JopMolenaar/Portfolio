@@ -198,14 +198,14 @@
             </section>
             <section class="contact">
                 <h2>Contact me</h2>
-                <form>
-                    <label for="">Your email: <input type="email" /></label>
-                    <label for="">Subject: <input type="text" /></label>
+                <form action="" method="">
+                    <label for="">Your email: <input required type="email" /></label>
+                    <label for="">Subject: <input required type="text" /></label>
                     <label for=""
                         >Message:
-                        <textarea id="" name="" rows="15" cols="33"></textarea>
+                        <textarea required id="" name="" rows="15" cols="33"></textarea>
                     </label>
-                    <button type="submit">Submit</button>
+                    <button type="submit">Send</button>
                 </form>
             </section>
             <dialog id="dialog">
@@ -228,8 +228,8 @@
         <footer>
             <p>© 2024 Jop Molenaar</p>
             <div>
-                <a href=""><img src="images/linkedInLogo.png" alt=""></a>
-                <a href=""><img src="images/" alt=""></a>
+                <a aria-label="Link to my linkedIn" href="https://www.linkedin.com/in/jop-molenaar-18718b259/"><img src="images/linkedInLogo.png" alt="LinkedIn logo"></a>
+                <a aria-label="Link to my github" href="https://github.com/JopMolenaar/"><img src="images/github-icon.png" alt="Github logo"></a>
             </div>
           </footer>
         <script defer src="js/script.js"></script>
