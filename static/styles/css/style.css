@@ -78,6 +78,26 @@ main > section {
   color: white;
 }
 
+footer {
+  padding: 1em;
+  background-color: #3B3B3B;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer a {
+  width: fit-content;
+}
+footer a img {
+  width: 1.8em;
+  filter: invert(100%);
+  transition: 200ms;
+}
+footer a:hover img {
+  scale: 1.1;
+}
+
 @media (prefers-color-scheme: dark) {
   input, textarea {
     color-scheme: dark;
