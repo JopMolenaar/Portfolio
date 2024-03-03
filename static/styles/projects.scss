@@ -39,6 +39,7 @@ main {
                         width: 100%;
                         height: 100%;
                         padding-top: 1em;
+                        overflow: scroll;
                         h3 {
                             margin-bottom: 1em;
                         }
@@ -51,6 +52,7 @@ main {
                                 display: flex;
                                 gap: 0.5rem;
                                 li {
+                                  
                                     list-style: none;
                                     background-color: rgb(66, 66, 66);
                                     width: fit-content;
@@ -161,7 +163,8 @@ main {
             > ul {
                 > li {
                     height: 38vh;
-                    max-height: 24em;
+                    // min-height: fit-content;
+                    // max-height: 24em;
                     button {
                         flex-direction: row;
                         img {
@@ -169,7 +172,7 @@ main {
                             width: 24em;
                         }
                         > div {
-                            padding: 2em;
+                            padding: 1em;
                         }
                     }
                 }

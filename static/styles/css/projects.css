@@ -41,6 +41,7 @@ main > section:nth-of-type(2) > ul > li button > div {
   width: 100%;
   height: 100%;
   padding-top: 1em;
+  overflow: scroll;
 }
 main > section:nth-of-type(2) > ul > li button > div h3 {
   margin-bottom: 1em;
@@ -137,7 +138,6 @@ main > section:nth-of-type(2) > ul > li button.unknown-project {
 @media (min-width: 50em) {
   main > section:nth-of-type(2) > ul > li {
     height: 38vh;
-    max-height: 24em;
   }
   main > section:nth-of-type(2) > ul > li button {
     flex-direction: row;
@@ -147,7 +147,7 @@ main > section:nth-of-type(2) > ul > li button.unknown-project {
     width: 24em;
   }
   main > section:nth-of-type(2) > ul > li button > div {
-    padding: 2em;
+    padding: 1em;
   }
   main > section:nth-of-type(2) > ul > li:nth-child(even) img {
     order: -1;
