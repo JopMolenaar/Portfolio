@@ -5,9 +5,9 @@ body.modal-open {
 
 #dialog {
   width: 90vw;
+  max-width: 55em;
   height: 90svh;
   margin: auto;
-  padding: 1em;
   opacity: 0;
   transform: scaleY(0);
   transition: opacity 0.3s ease-out, transform 0.3s ease-out, overlay 0.3s ease-out allow-discrete, display 0.3s ease-out allow-discrete;
@@ -16,10 +16,11 @@ body.modal-open {
   border: none;
   border-top: 1px white solid;
   border-bottom: 1px white solid;
+  flex-direction: column;
 }
 #dialog article {
+  padding: 1em;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -60,10 +61,32 @@ body.modal-open {
 #dialog button:active img {
   scale: 0.95;
 }
+#dialog > footer {
+  width: 100%;
+  margin-top: auto;
+}
+#dialog > footer ul {
+  display: flex;
+  gap: 0.5rem;
+}
+#dialog > footer ul li {
+  background-color: rgb(86, 86, 86);
+  list-style: none;
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+#dialog > footer a {
+  color: white;
+  transition: 200ms;
+}
+#dialog > footer a:hover {
+  color: rgb(133, 196, 195);
+}
 
 #dialog[open] {
   opacity: 1;
   transform: scaleY(1);
+  display: flex;
 }
 
 @starting-style {
@@ -91,16 +114,12 @@ body.modal-open {
   #dialog article p {
     padding-left: 1em;
     width: 90%;
-    min-width: 20em;
   }
   #dialog article section {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 50em) {
-  #dialog {
-    padding: 2em;
-  }
   #dialog article {
     display: grid;
     grid-template-columns: 1fr 2fr;

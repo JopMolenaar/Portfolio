@@ -5,9 +5,9 @@ body.modal-open {
 
 #dialog {
     width: 90vw;
+    max-width: 55em;
     height: 90svh;
     margin: auto;
-    padding: 1em;
     opacity: 0;
     transform: scaleY(0);
     transition: opacity 0.3s ease-out, transform 0.3s ease-out,
@@ -18,27 +18,18 @@ body.modal-open {
     border: none;
     border-top: 1px white solid;
     border-bottom: 1px white solid;
+    flex-direction: column;
     article {
+        padding: 1em;
         width: 100%;
-        height: 100%;
         display: flex;
         flex-direction: column;
-        // grid-template-columns: 1fr;
-
-        // grid-template-rows: 8em 1fr 1fr;
         h4 {
             font-size: 2em;
             padding: 1em;
-            // grid-column: 1/3;
             text-align: center;
-            // margin: auto;
-            // margin-bottom: 2em;
         }
         p {
-            // padding-left: 1em;
-            // grid-column: 2/3;
-            // width: 90%;
-            // min-width: 20em;
             max-width: 40em;
         }
         section {
@@ -46,13 +37,7 @@ body.modal-open {
             display: grid;
             width: 100%;
             grid-template-columns: 1fr;
-            // flex-direction: row;
-            // justify-content: space-between;
-            // grid-row: 2/3;
-            // grid-column: 1/2;
-            // padding-right: 1em;
             img {
-                // width: 49%;
                 width: 100%;
                 object-fit: cover;
                 max-height: 20em;
@@ -81,10 +66,32 @@ body.modal-open {
            scale: 0.95;
         }
     }
+    > footer {
+        width: 100%;
+        margin-top: auto;
+        ul {
+            display: flex;
+            gap: 0.5rem;
+            li {
+                background-color: rgb(86, 86, 86);
+                list-style: none;
+                border-radius: 10px;
+                padding: 0.3rem;
+            }
+        }
+        a {
+            color: white;
+            transition: 200ms;
+        }
+        a:hover {
+            color: rgb(133, 196, 195);
+        }
+    }
 }
 #dialog[open] {
     opacity: 1;
     transform: scaleY(1);
+    display: flex;
 }
 
 @starting-style {
@@ -114,7 +121,6 @@ body.modal-open {
             p {
             padding-left: 1em;
             width: 90%;
-            min-width: 20em;
             }
             section {
                 grid-template-columns: 1fr 1fr;
@@ -124,7 +130,7 @@ body.modal-open {
 }
 @media (min-width: 50em) {
     #dialog {
-        padding: 2em;
+        // padding: 2em;
         article {
             display: grid;
             grid-template-columns: 1fr 2fr;
